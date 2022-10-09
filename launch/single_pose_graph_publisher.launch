@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  
+  <!-- set arguments -->
+  <arg name="file_path"     default="/home/nived/logs/2022-03-03-new-hilti-runs/exp01/exp01-01/slam_pose_graph.g2o"/>
+  <arg name="publish_rate"  default="10"/>
+
+  <!-- launch single_pose_graph_publisher -->
+  <node name="single_pose_graph_publisher" pkg="multi_session_slam_viewer" type="single_pose_graph_publisher_node"
+   args=" $(arg file_path) 
+         $(arg publish_rate)"
+  />
+
+  <!-- Display RVIZ -->
+  <node name="single_pose_graph_rviz" pkg="rviz" type="rviz" args="-d $(find multi_session_slam_viewer)/config/rviz/pose_graph_viewer.rviz"/>
+
+</launch>
