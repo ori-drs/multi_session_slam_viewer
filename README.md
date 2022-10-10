@@ -1,2 +1,8 @@
 # multi_session_slam_viewer
-Visualize multiple SLAM sessions
+
+Visualize multiple SLAM sessions in Rviz.
+
+
+
+
+

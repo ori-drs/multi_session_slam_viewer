@@ -4,7 +4,7 @@
   
   <!-- set arguments -->
   <arg name="file_path"     default="/home/nived/logs/2022-03-03-new-hilti-runs/exp01/exp01-01/slam_pose_graph.g2o"/>
-  <arg name="publish_rate"  default="10"/>
+  <arg name="publish_rate"  default="5"/>
 
   <!-- launch single_pose_graph_publisher -->
   <node name="single_pose_graph_publisher" pkg="multi_session_slam_viewer" type="single_pose_graph_publisher_node"
